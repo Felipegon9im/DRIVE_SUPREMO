@@ -10,8 +10,8 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8f9fa; /* Light Google-inspired gray background */
-            color: #202124; /* Dark Google-inspired text color */
+            background-color: #1a202c; /* Dark gray background */
+            color: #e2e8f0; /* Light gray text color */
             line-height: 1.6;
             overflow-x: hidden; /* Prevent horizontal scroll on small devices */
         }
@@ -43,16 +43,16 @@
         .section-title {
             font-size: 3rem; /* Larger title */
             font-weight: 800; /* Extra bold */
-            color: #202124; /* Darker text for titles, Google-inspired */
+            color: #f7fafc; /* White for titles */
             margin-bottom: 2.5rem; /* Increased margin */
             text-align: center;
             line-height: 1.2;
         }
         .card {
-            background-color: white;
+            background-color: #2d3748; /* Darker card background */
             border-radius: 1.5rem; /* More rounded corners */
             padding: 2.5rem; /* More padding inside cards */
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); /* Stronger, softer shadow */
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3); /* Stronger, darker shadow */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex;
             flex-direction: column;
@@ -62,7 +62,7 @@
         }
         .card:hover {
             transform: translateY(-8px); /* More pronounced lift */
-            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
         }
         .icon {
             font-size: 3rem; /* Larger icons */
@@ -70,7 +70,7 @@
             display: block;
             text-align: center;
         }
-        /* Specific icon colors inspired by Google Drive */
+        /* Specific icon colors inspired by Google Drive - kept vibrant for contrast */
         .icon.blue { color: #4285F4; } /* Google Blue */
         .icon.green { color: #34A853; } /* Google Green */
         .icon.yellow { color: #FBBC05; } /* Google Yellow */
@@ -129,7 +129,7 @@
             max-width: 900px; /* Increased max width for desktop */
             margin: 0 auto 3rem; /* Center and add more margin below */
             border-radius: 1.5rem; /* More rounded corners for the video */
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4); /* Stronger dark shadow */
         }
         .video-container iframe {
             position: absolute;
@@ -139,13 +139,13 @@
             height: 100%;
             border: 0;
         }
-        /* Header background pattern */
+        /* Header background pattern - adjusted for dark theme */
         .header-bg-pattern {
             background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
         }
         .list-item-detail {
             font-size: 1.125rem; /* text-lg */
-            color: #4a5568; /* gray-700 */
+            color: #cbd5e0; /* light gray for list items */
             margin-bottom: 0.75rem; /* mb-3 */
             display: flex;
             align-items: flex-start;
@@ -155,14 +155,14 @@
             flex-shrink: 0;
         }
 
-        /* Carousel specific styles */
+        /* Carousel specific styles - adjusted for dark theme */
         .carousel-container {
             position: relative;
             max-width: 1000px; /* Max width for the carousel */
             margin: 0 auto 4rem; /* Center and add margin below */
             overflow: hidden;
             border-radius: 1.5rem;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4); /* Darker shadow */
         }
         .carousel-slides {
             display: flex;
@@ -174,6 +174,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            background-color: #2d3748; /* Dark background for slides */
         }
         .carousel-slide img {
             width: 100%;
@@ -181,48 +182,20 @@
             border-radius: 1.5rem; /* Match container border-radius */
         }
         .carousel-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(255, 255, 255, 0.2); /* Lighter background for buttons */
             color: white;
-            border: none;
-            padding: 1rem;
-            cursor: pointer;
-            z-index: 10;
-            border-radius: 50%;
-            font-size: 1.5rem;
-            transition: background-color 0.3s ease;
         }
         .carousel-button:hover {
-            background-color: rgba(0, 0, 0, 0.7);
-        }
-        .carousel-button.prev {
-            left: 1rem;
-        }
-        .carousel-button.next {
-            right: 1rem;
+            background-color: rgba(255, 255, 255, 0.4); /* Lighter hover */
         }
         .carousel-dots {
-            position: absolute;
             bottom: 1rem;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 0.5rem;
-            z-index: 10;
         }
         .carousel-dot {
-            width: 10px;
-            height: 10px;
-            background-color: rgba(255, 255, 255, 0.5);
-            border-radius: 50%;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.4); /* Lighter dots */
         }
         .carousel-dot.active {
             background-color: white;
-            transform: scale(1.2);
         }
     </style>
 </head>
@@ -235,10 +208,10 @@
                 <img src="https://www.gstatic.com/images/branding/product/2x/drive_2020q4_48dp.png" alt="Google Drive Logo" class="drive-logo mb-4 md:mb-0">
                 A CHAVE DA INTERNET <br class="md:hidden"/>— O DRIVE SUPREMO POR APENAS R$27
             </h1>
-            <p class="text-2xl md:text-3xl font-semibold mb-10">
+            <p class="text-2xl md:text-3xl font-semibold mb-10 text-gray-200">
                 🚨 VOCÊ NUNCA MAIS VAI PRECISAR PROCURAR NADA NA INTERNET. TÁ TUDO AQUI!
             </p>
-            <p class="text-xl md:text-2xl mb-16 max-w-4xl mx-auto opacity-95">
+            <p class="text-xl md:text-2xl mb-16 max-w-4xl mx-auto opacity-95 text-gray-100">
                 🔥 São mais de <span class="font-black text-[#FBBC05] text-4xl md:text-5xl drop-shadow-lg">500 MIL arquivos raros e valiosos</span> reunidos num único drive. É conteúdo pra estudar, empreender, revender e lucrar o quanto quiser!
             </p>
             <a href="https://pay.kiwify.com.br/UO1cl5O" class="btn-primary animate-pulse-custom">
@@ -248,9 +221,9 @@
     </header>
 
     <!-- Video Section -->
-    <section class="py-16 px-4 bg-gray-100">
+    <section class="py-16 px-4 bg-[#2d3748]"> /* Dark background */
         <div class="container">
-            <h2 class="section-title text-[#202124] mb-10">Veja o que você vai ter acesso!</h2>
+            <h2 class="section-title text-white mb-10">Veja o que você vai ter acesso!</h2>
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/7ozK7I1aH7w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
@@ -258,7 +231,7 @@
     </section>
 
     <!-- What You Get Section -->
-    <section class="py-20 px-4 bg-white">
+    <section class="py-20 px-4 bg-[#1a202c]"> /* Dark background */
         <div class="container">
             <h2 class="section-title text-[#4285F4]">
                 ✅ O QUE VOCÊ LEVA POR APENAS R$27?
@@ -266,47 +239,47 @@
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
                 <div class="card">
                     <span class="icon blue">📚</span>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800">1.500 eBooks</h3>
-                    <p class="text-gray-600 text-lg">Livros digitais de todas as áreas, best-sellers e coleções raras para expandir seu conhecimento.</p>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-100">1.500 eBooks</h3>
+                    <p class="text-gray-300 text-lg">Livros digitais de todas as áreas, best-sellers e coleções raras para expandir seu conhecimento.</p>
                 </div>
                 <div class="card">
                     <span class="icon green">📲</span>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800">APKs Premium</h3>
-                    <p class="text-gray-600 text-lg">Apps pagos, modificados e exclusivos para otimizar sua vida digital, sem custo adicional.</p>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-100">APKs Premium</h3>
+                    <p class="text-gray-300 text-lg">Apps pagos, modificados e exclusivos para otimizar sua vida digital, sem custo adicional.</p>
                 </div>
                 <div class="card">
                     <span class="icon yellow">📡</span>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800">IPTV Vitalício</h3>
-                    <p class="text-gray-600 text-lg">Canais, filmes e séries sem mensalidade. Diga adeus às assinaturas e desfrute do entretenimento que você merece.</p>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-100">IPTV Vitalício</h3>
+                    <p class="text-gray-300 text-lg">Canais, filmes e séries sem mensalidade. Diga adeus às assinaturas e desfrute do entretenimento que você merece.</p>
                 </div>
                 <div class="card">
                     <span class="icon blue">🎓</span>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Material completo de concurso público</h3>
-                    <p class="text-gray-600 text-lg">Prepare-se para o sucesso com conteúdo de todas as áreas e bancas, incluindo **Direito, Medicina, Enfermagem** e muito mais!</p>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-100">Material completo de concurso público</h3>
+                    <p class="text-gray-300 text-lg">Prepare-se para o sucesso com conteúdo de todas as áreas e bancas, incluindo **Direito, Medicina, Enfermagem** e muito mais!</p>
                 </div>
                 <div class="card">
                     <span class="icon green">🎁</span>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Pastas secretas</h3>
-                    <p class="text-gray-600 text-lg">Um **mundo de arquivos** com hacks, ferramentas e coleções ocultas para você **faturar, lucrar e impressionar as pessoas**!</p>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-100">Pastas secretas</h3>
+                    <p class="text-gray-300 text-lg">Um **mundo de arquivos** com hacks, ferramentas e coleções ocultas para você **faturar, lucrar e impressionar as pessoas**!</p>
                 </div>
                 <div class="card">
                     <span class="icon yellow">✨</span>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800">+10 mil templates de sites premium do Envato Templates</h3>
-                    <p class="text-gray-600 text-lg">Acesse uma vasta biblioteca de templates profissionais para seus projetos, sem custo adicional.</p>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-100">+10 mil templates de sites premium do Envato Templates</h3>
+                    <p class="text-gray-300 text-lg">Acesse uma vasta biblioteca de templates profissionais para seus projetos, sem custo adicional.</p>
                 </div>
                 <div class="card">
                     <span class="icon red">💡</span>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Centenas de Cursos Pagos</h3>
-                    <p class="text-gray-600 text-lg">Aprimore suas habilidades com uma vasta coleção de cursos de diversas áreas, todos disponíveis para você.</p>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-100">Centenas de Cursos Pagos</h3>
+                    <p class="text-gray-300 text-lg">Aprimore suas habilidades com uma vasta coleção de cursos de diversas áreas, todos disponíveis para você.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Carousel Section -->
-    <section class="py-16 px-4 bg-gray-100">
+    <section class="py-16 px-4 bg-[#2d3748]"> /* Dark background */
         <div class="container">
-            <h2 class="section-title text-[#202124] mb-10">Uma Amostra do Que Você Vai Encontrar!</h2>
+            <h2 class="section-title text-white mb-10">Uma Amostra do Que Você Vai Encontrar!</h2>
             <div class="carousel-container">
                 <div class="carousel-slides" id="carouselSlides">
                     <div class="carousel-slide">
@@ -339,12 +312,12 @@
     </section>
 
     <!-- New Section: Explore o Conteúdo Completo do Drive Supremo -->
-    <section class="py-20 px-4 bg-[#f0f2f5]">
+    <section class="py-20 px-4 bg-[#1a202c]"> /* Dark background */
         <div class="container">
-            <h2 class="section-title text-[#202124] mb-10">
+            <h2 class="section-title text-white mb-10">
                 🔍 Explore o Conteúdo Completo do Drive Supremo!
             </h2>
-            <p class="text-xl md:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto text-center">
+            <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto text-center">
                 Descubra a riqueza de arquivos e recursos que esperam por você em diversas áreas:
             </p>
             <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
@@ -444,29 +417,29 @@
     </section>
 
     <!-- New Section: Sua Vida Digital Nunca Mais Será a Mesma -->
-    <section class="py-20 px-4 bg-[#e6f2ff] text-center">
+    <section class="py-20 px-4 bg-[#2d3748] text-center"> /* Dark background */
         <div class="container">
             <h2 class="section-title text-[#2563eb] mb-8">
                 🚀 Sua Vida Digital NUNCA Mais Será a Mesma!
             </h2>
-            <p class="text-xl md:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto">
+            <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
                 Chega de perder tempo e dinheiro! Com o Drive Supremo, você tem acesso instantâneo a um arsenal de conhecimento e ferramentas que vão te impulsionar.
             </p>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="p-6 bg-white rounded-xl shadow-md transform hover:scale-105 transition duration-300">
+                <div class="p-6 bg-[#1a202c] rounded-xl shadow-md transform hover:scale-105 transition duration-300"> /* Dark card background */
                     <span class="block text-5xl mb-4 text-[#4285F4]">⏱️</span>
-                    <h3 class="text-xl font-bold mb-2 text-gray-800">Otimize Seu Tempo</h3>
-                    <p class="text-gray-600">Encontre tudo que precisa em segundos, sem buscas intermináveis.</p>
+                    <h3 class="text-xl font-bold mb-2 text-gray-100">Otimize Seu Tempo</h3>
+                    <p class="text-gray-300">Encontre tudo que precisa em segundos, sem buscas intermináveis.</p>
                 </div>
-                <div class="p-6 bg-white rounded-xl shadow-md transform hover:scale-105 transition duration-300">
+                <div class="p-6 bg-[#1a202c] rounded-xl shadow-md transform hover:scale-105 transition duration-300"> /* Dark card background */
                     <span class="block text-5xl mb-4 text-[#34A853]">💰</span>
-                    <h3 class="text-xl font-bold mb-2 text-gray-800">Multiplique Seus Lucros</h3>
-                    <p class="text-gray-600">Use o conteúdo para criar novos negócios ou impulsionar os existentes.</p>
+                    <h3 class="text-xl font-bold mb-2 text-gray-100">Multiplique Seus Lucros</h3>
+                    <p class="text-gray-300">Use o conteúdo para criar novos negócios ou impulsionar os existentes.</p>
                 </div>
-                <div class="p-6 bg-white rounded-xl shadow-md transform hover:scale-105 transition duration-300">
+                <div class="p-6 bg-[#1a202c] rounded-xl shadow-md transform hover:scale-105 transition duration-300"> /* Dark card background */
                     <span class="block text-5xl mb-4 text-[#FBBC05]">✨</span>
-                    <h3 class="text-xl font-bold mb-2 text-gray-800">Domine Novas Habilidades</h3>
-                    <p class="text-gray-600">Acesse cursos e materiais que te levarão ao próximo nível.</p>
+                    <h3 class="text-xl font-bold mb-2 text-gray-100">Domine Novas Habilidades</h3>
+                    <p class="text-gray-300">Acesse cursos e materiais que te levarão ao próximo nível.</p>
                 </div>
             </div>
             <a href="https://pay.kiwify.com.br/UO1cl5O" class="btn-primary mt-16 bg-[#34A853] hover:bg-[#2e8b4e] text-white animate-pulse-custom">
@@ -476,7 +449,7 @@
     </section>
 
     <!-- Freedom of Use Section -->
-    <section class="py-20 px-4 bg-[#f0f2f5]">
+    <section class="py-20 px-4 bg-[#1a202c]"> /* Dark background */
         <div class="container text-center">
             <h2 class="section-title text-[#34A853]">
                 🤑 Liberdade total de uso: Seu Conteúdo, Suas Regras!
@@ -484,18 +457,18 @@
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-16">
                 <div class="card p-8">
                     <span class="icon green">✔️</span>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Revenda tudo ou em partes</h3>
-                    <p class="text-gray-600 text-lg">Transforme este drive em sua própria fonte de renda, revendendo o conteúdo como quiser.</p>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-100">Revenda tudo ou em partes</h3>
+                    <p class="text-gray-300 text-lg">Transforme este drive em sua própria fonte de renda, revendendo o conteúdo como quiser.</p>
                 </div>
                 <div class="card p-8">
                     <span class="icon blue">✔️</span>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Monte seu próprio drive, canal ou loja</h3>
-                    <p class="text-gray-600 text-lg">Use nosso conteúdo como base para seu próximo grande projeto digital.</p>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-100">Monte seu próprio drive, canal ou loja</h3>
+                    <p class="text-gray-300 text-lg">Use nosso conteúdo como base para seu próximo grande projeto digital.</p>
                 </div>
                 <div class="card p-8">
                     <span class="icon yellow">✔️</span>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Estude, crie, automatize, lucre como quiser</h3>
-                    <p class="text-gray-600 text-lg">As possibilidades são infinitas! Use o drive para seu crescimento pessoal e financeiro.</p>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-100">Estude, crie, automatize, lucre como quiser</h3>
+                    <p class="text-gray-300 text-lg">As possibilidades são infinitas! Use o drive para seu crescimento pessoal e financeiro.</p>
                 </div>
             </div>
         </div>
@@ -535,12 +508,12 @@
     </section>
 
     <!-- Final Call to Action Section -->
-    <section id="call-to-action" class="py-20 px-4 bg-white text-center">
+    <section id="call-to-action" class="py-20 px-4 bg-[#1a202c]"> /* Dark background */
         <div class="container">
-            <h2 class="text-5xl md:text-6xl font-bold text-[#202124] mb-10">
+            <h2 class="text-5xl md:text-6xl font-bold text-white mb-10">
                 🚀 Essa é a mina de ouro digital que você esperava.
             </h2>
-            <p class="text-xl md:text-2xl text-gray-600 mb-16 max-w-4xl mx-auto">
+            <p class="text-xl md:text-2xl text-gray-300 mb-16 max-w-4xl mx-auto">
                 Não perca mais tempo procurando! Tenha acesso a um universo de conteúdo valioso e comece a lucrar hoje mesmo.
             </p>
             <a href="https://pay.kiwify.com.br/UO1cl5O" class="btn-primary animate-pulse-custom">
@@ -621,6 +594,7 @@
     </script>
 </body>
 </html>
+
 
 
 
