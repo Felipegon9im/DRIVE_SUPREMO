@@ -154,6 +154,76 @@
             margin-right: 0.75rem; /* mr-3 */
             flex-shrink: 0;
         }
+
+        /* Carousel specific styles */
+        .carousel-container {
+            position: relative;
+            max-width: 1000px; /* Max width for the carousel */
+            margin: 0 auto 4rem; /* Center and add margin below */
+            overflow: hidden;
+            border-radius: 1.5rem;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+        .carousel-slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .carousel-slide img {
+            width: 100%;
+            height: auto;
+            border-radius: 1.5rem; /* Match container border-radius */
+        }
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 1rem;
+            cursor: pointer;
+            z-index: 10;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            transition: background-color 0.3s ease;
+        }
+        .carousel-button:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .carousel-button.prev {
+            left: 1rem;
+        }
+        .carousel-button.next {
+            right: 1rem;
+        }
+        .carousel-dots {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 0.5rem;
+            z-index: 10;
+        }
+        .carousel-dot {
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .carousel-dot.active {
+            background-color: white;
+            transform: scale(1.2);
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -229,6 +299,41 @@
                     <h3 class="text-2xl font-bold mb-3 text-gray-800">Centenas de Cursos Pagos</h3>
                     <p class="text-gray-600 text-lg">Aprimore suas habilidades com uma vasta coleção de cursos de diversas áreas, todos disponíveis para você.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carousel Section -->
+    <section class="py-16 px-4 bg-gray-100">
+        <div class="container">
+            <h2 class="section-title text-[#202124] mb-10">Uma Amostra do Que Você Vai Encontrar!</h2>
+            <div class="carousel-container">
+                <div class="carousel-slides" id="carouselSlides">
+                    <div class="carousel-slide">
+                        <img src="https://raw.githubusercontent.com/Felipegon9im/DRIVE_SUPREMO/main/Captura%20de%20tela%202025-07-13%20203235.png" alt="Conteúdo do Drive Supremo 1" onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/000000?text=Imagem+Drive+1'">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://raw.githubusercontent.com/Felipegon9im/DRIVE_SUPREMO/main/Captura%20de%20tela%202025-07-13%20203325eee.png" alt="Conteúdo do Drive Supremo 2" onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/000000?text=Imagem+Drive+2'">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://raw.githubusercontent.com/Felipegon9im/DRIVE_SUPREMO/main/Captura%20de%20tela%202025-07-13%20203512.png" alt="Conteúdo do Drive Supremo 3" onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/000000?text=Imagem+Drive+3'">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://raw.githubusercontent.com/Felipegon9im/DRIVE_SUPREMO/main/fdffdf.png" alt="Conteúdo do Drive Supremo 4" onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/000000?text=Imagem+Drive+4'">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://raw.githubusercontent.com/Felipegon9im/DRIVE_SUPREMO/main/kkjijfef.png" alt="Conteúdo do Drive Supremo 5" onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/000000?text=Imagem+Drive+5'">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://raw.githubusercontent.com/Felipegon9im/DRIVE_SUPREMO/main/knnjjnjvenjveldkdc.png" alt="Conteúdo do Drive Supremo 6" onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/000000?text=Imagem+Drive+6'">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://raw.githubusercontent.com/Felipegon9im/DRIVE_SUPREMO/main/uhuhuh.png" alt="Conteúdo do Drive Supremo 7" onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/000000?text=Imagem+Drive+7'">
+                    </div>
+                </div>
+                <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
+                <div class="carousel-dots" id="carouselDots"></div>
             </div>
         </div>
     </section>
@@ -459,7 +564,63 @@
         </div>
     </footer>
 
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const carouselSlidesContainer = document.getElementById('carouselSlides');
+        const dotsContainer = document.getElementById('carouselDots');
+        let autoSlideInterval;
+
+        // Create dots
+        slides.forEach((_, i) => {
+            const dot = document.createElement('span');
+            dot.classList.add('carousel-dot');
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => currentSlide(i));
+            dotsContainer.appendChild(dot);
+        });
+        const dots = document.querySelectorAll('.carousel-dot');
+
+        function showSlides() {
+            carouselSlidesContainer.style.transform = `translateX(${-slideIndex * 100}%)`;
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === slideIndex);
+            });
+        }
+
+        function moveSlide(n) {
+            slideIndex += n;
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            }
+            if (slideIndex < 0) {
+                slideIndex = slides.length - 1;
+            }
+            showSlides();
+            resetAutoSlide();
+        }
+
+        function currentSlide(n) {
+            slideIndex = n;
+            showSlides();
+            resetAutoSlide();
+        }
+
+        function autoSlide() {
+            moveSlide(1);
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(autoSlide, 5000); // Change image every 5 seconds
+        }
+
+        // Initialize carousel
+        showSlides();
+        resetAutoSlide(); // Start auto-sliding
+    </script>
 </body>
 </html>
+
 
 
