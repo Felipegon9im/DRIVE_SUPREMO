@@ -6,7 +6,7 @@
     <title>A Chave da Internet — O Drive Supremo</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -139,12 +139,27 @@
             height: 100%;
             border: 0;
         }
+        /* Header background pattern */
+        .header-bg-pattern {
+            background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+        }
+        .list-item-detail {
+            font-size: 1.125rem; /* text-lg */
+            color: #4a5568; /* gray-700 */
+            margin-bottom: 0.75rem; /* mb-3 */
+            display: flex;
+            align-items: flex-start;
+        }
+        .list-item-detail svg {
+            margin-right: 0.75rem; /* mr-3 */
+            flex-shrink: 0;
+        }
     </style>
 </head>
 <body class="antialiased">
 
     <!-- Hero Section -->
-    <header class="bg-gradient-to-r from-[#4285F4] to-[#34A853] text-white py-24 px-4 text-center rounded-b-[3rem] shadow-2xl">
+    <header class="bg-gradient-to-r from-[#4285F4] to-[#34A853] text-white py-24 px-4 text-center rounded-b-[3rem] shadow-2xl header-bg-pattern">
         <div class="container">
             <h1 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight flex flex-col md:flex-row items-center justify-center">
                 <img src="https://www.gstatic.com/images/branding/product/2x/drive_2020q4_48dp.png" alt="Google Drive Logo" class="drive-logo mb-4 md:mb-0">
@@ -154,7 +169,7 @@
                 🚨 VOCÊ NUNCA MAIS VAI PRECISAR PROCURAR NADA NA INTERNET. TÁ TUDO AQUI!
             </p>
             <p class="text-xl md:text-2xl mb-16 max-w-4xl mx-auto opacity-95">
-                🔥 São mais de <span class="font-bold text-[#FBBC05] text-3xl md:text-4xl">500 MIL arquivos raros e valiosos</span> reunidos num único drive. É conteúdo pra estudar, empreender, revender e lucrar o quanto quiser!
+                🔥 São mais de <span class="font-black text-[#FBBC05] text-4xl md:text-5xl drop-shadow-lg">500 MIL arquivos raros e valiosos</span> reunidos num único drive. É conteúdo pra estudar, empreender, revender e lucrar o quanto quiser!
             </p>
             <a href="https://pay.kiwify.com.br/UO1cl5O" class="btn-primary animate-pulse-custom">
                 QUERO MEU DRIVE SUPREMO AGORA!
@@ -209,13 +224,149 @@
                     <h3 class="text-2xl font-bold mb-3 text-gray-800">+10 mil templates de sites premium do Envato Templates</h3>
                     <p class="text-gray-600 text-lg">Acesse uma vasta biblioteca de templates profissionais para seus projetos, sem custo adicional.</p>
                 </div>
-                <!-- New item added here -->
                 <div class="card">
                     <span class="icon red">💡</span>
                     <h3 class="text-2xl font-bold mb-3 text-gray-800">Centenas de Cursos Pagos</h3>
                     <p class="text-gray-600 text-lg">Aprimore suas habilidades com uma vasta coleção de cursos de diversas áreas, todos disponíveis para você.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- New Section: Explore o Conteúdo Completo do Drive Supremo -->
+    <section class="py-20 px-4 bg-[#f0f2f5]">
+        <div class="container">
+            <h2 class="section-title text-[#202124] mb-10">
+                🔍 Explore o Conteúdo Completo do Drive Supremo!
+            </h2>
+            <p class="text-xl md:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto text-center">
+                Descubra a riqueza de arquivos e recursos que esperam por você em diversas áreas:
+            </p>
+            <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-[#4285F4] mb-4 flex items-center">
+                        <svg class="w-8 h-8 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0113 3.414L16.586 7A2 2 0 0117 8.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1-5a1 1 0 100 2h2a1 1 0 100-2H7z" clip-rule="evenodd"></path></svg>
+                        Negócios e Empreendedorismo
+                    </h3>
+                    <ul class="list-none p-0">
+                        <li class="list-item-detail"><svg class="w-5 h-5 mt-1 text-[#34A853]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>DRIVE PLUS NEGÓCIOS e ADMINISTRAÇÃO</li>
+                        <li class="list-item-detail"><svg class="w-5 h-5 mt-1 text-[#34A853]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Marketing Digital e Vendas (inclui PACK CANVA MARKETING DIGITAL 2.0, Páginas de Vendas, Sequência Manychat em Imagens)</li>
+                        <li class="list-item-detail"><svg class="w-5 h-5 mt-1 text-[#34A853]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Mercado Financeiro e "O ouro do mercado"</li>
+                        <li class="list-item-detail"><svg class="w-5 h-5 mt-1 text-[#34A853]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Dropshipping e E-commerce (inclui DRIVE PLUS DROPS, 9 Temas para Loja Shopify)</li>
+                        <li class="list-item-detail"><svg class="w-5 h-5 mt-1 text-[#34A853]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>PLRs (Private Label Rights) e Revenda (inclui 10 mil PLRs, 1000 PLRs Português, Revenda Tudo Isso e Lucre Muito)</li>
+                        <li class="list-item-detail"><svg class="w-5 h-5 mt-1 text-[#34A853]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Criativos Americanos (2 MIL)</li>
+                        <li class="list-item-detail"><svg class="w-5 h-5 mt-1 text-[#34A853]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Hamburgueria e NICHOS DIVERSOS</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-[#34A853] mb-4 flex items-center">
+                        <svg class="w-8 h-8 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12 7a1 1 0 11-2 0 1 1 0 012 0zM10 12a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"></path><path fill-rule="evenodd" d="M.93 4.586A2 2 0 012.414 3h11.172a2 2 0 011.486.686l2.83 2.83A2 2 0 0119 7.414V16a2 2 0 01-2 2H3a2 2 0 01-2-2V5.414a2 2 0 01.93-1.828zM3 7v9h14V7.414L14.586 4.5A.997.997 0 0014 4H2.414L3 7z" clip-rule="evenodd"></path></svg>
+                        Tecnologia e Desenvolvimento
+                    </h3>
+                    <ul class="list-none p-0">
+                        <li class="list-item-detail"><svg class="w-5 h-5 mt-1 text-[#FBBC05]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>DRIVE PLUS TI HARDWARE e PROGRAMAÇÃO</li>
+                        <li class="list-item-detail"><svg class="w-5 h-5 mt-1 text-[#FBBC05]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Edição de Vídeo (inclui PACK DE EDIÇÃO PARA VIDEOS)</li>
+                        <li class="list-item-detail"><svg class="w-5 h-5 mt-1 text-[#FBBC05]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Ferramentas e Softwares (inclui pacote de ferramentas, SFX Interface PRO, Spypack, Zap Voice para PC, Livros FaceCTRL)</li>
+                        <li class="list-item-detail"><svg class="w-5 h-5 mt-1 text-[#FBBC05]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>IMAGIN AI</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-[#FBBC05] mb-4 flex items-center">
+                        <svg class="w-8 h-8 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-4V3a1 1 0 10-2 0v1H9zM4 9v7h12V9H4z" clip-rule="evenodd"></path></svg>
+                        Saúde e Bem-Estar
+                    </h3>
+                    <ul class="list-none p-0">
+                        <li class="list-item-detail"><svg class="w-5 h-5 mt-1 text-[#EA4335]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>DRIVE PLUS SAÚDE e MEDICINA</li>
+                        <li class="list-item-detail"><svg class="w-5 h-5 mt-1 text-[#EA4335]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>278 Exercícios de Musculação</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-[#EA4335] mb-4 flex items-center">
+                        <svg class="w-8 h-8 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm10 2a1 1 0 100 2 1 1 0 000-2zm-4 0a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"></path></svg>
+                        Arte e Design
+                    </h3>
+                    <ul class="list-none p-0">
+                        <li class="list-item-detail"><svg class="w-5 h-5 mt-1 text-[#4285F4]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>DRIVE PLUS ARQUITETURA e DESENHO 3D</li>
+                        <li class="list-item-detail"><svg class="w-5 h-5 mt-1 text-[#4285F4]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Fotografia</li>
+                        <li class="list-item-detail"><svg class="w-5 h-5 mt-1 text-[#4285F4]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Artes Gráficas (inclui 130 Artes Salão de Beleza, 800 Mil Estampas, 1500 Arte Sublimação - Flork Bento, PACK PARA THUMBNAIL)</li>
+                        <li class="list-item-detail"><svg class="w-5 h-5 mt-1 text-[#4285F4]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>BRINDE CANVA</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-[#4285F4] mb-4 flex items-center">
+                        <svg class="w-8 h-8 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        Educação e Conhecimento
+                    </h3>
+                    <ul class="list-none p-0">
+                        <li class="list-item-detail"><svg class="w-5 h-5 mt-1 text-[#34A853]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>DRIVE PLUS IDIOMAS e DESENVOLVIMENTO PESSOAL</li>
+                        <li class="list-item-detail"><svg class="w-5 h-5 mt-1 text-[#34A853]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Cursos e Módulos (inclui Aula 6 [Módulo 02], Módulo 06 - Estratégia de Rompimento, DRIVE GRÁTIS MONETIZANDO NA WEB)</li>
+                        <li class="list-item-detail"><svg class="w-5 h-5 mt-1 text-[#34A853]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Livros sobre MENTALIDADE</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-[#34A853] mb-4 flex items-center">
+                        <svg class="w-8 h-8 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        Entretenimento e Mídia
+                    </h3>
+                    <ul class="list-none p-0">
+                        <li class="list-item-detail"><svg class="w-5 h-5 mt-1 text-[#FBBC05]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>1800 Trilhas Sonoras</li>
+                        <li class="list-item-detail"><svg class="w-5 h-5 mt-1 text-[#FBBC05]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Vídeos Virais (1.979) e Pacote Completo com Vídeos e Fotos</li>
+                        <li class="list-item-detail"><svg class="w-5 h-5 mt-1 text-[#FBBC05]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>10 Mil Jogos Retro</li>
+                        <li class="list-item-detail"><svg class="w-5 h-5 mt-1 text-[#FBBC05]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Músicas e Estruturas (PACK GOSPEL + BÔNUS PREMIUM)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-[#FBBC05] mb-4 flex items-center">
+                        <svg class="w-8 h-8 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        Recursos Essenciais e Bônus
+                    </h3>
+                    <ul class="list-none p-0">
+                        <li class="list-item-detail"><svg class="w-5 h-5 mt-1 text-[#EA4335]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Planilhas Excel (SUPER PACK +15.000 PLANILHAS EXCEL PRONTAS EDITÁVEIS)</li>
+                        <li class="list-item-detail"><svg class="w-5 h-5 mt-1 text-[#EA4335]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Grupos de WhatsApp (250K de Grupos + 12 MIL Grupos de Divulgação Grátis)</li>
+                        <li class="list-item-detail"><svg class="w-5 h-5 mt-1 text-[#EA4335]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Arquivos Jurídicos (BÔNUS 01 +4600 ARQUIVOS JURÍDICOS)</li>
+                        <li class="list-item-detail"><svg class="w-5 h-5 mt-1 text-[#EA4335]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>BIG PACK DE SITES 2K</li>
+                        <li class="list-item-detail"><svg class="w-5 h-5 mt-1 text-[#EA4335]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Vídeos e arquivos Forum Black Rat</li>
+                        <li class="list-item-detail"><svg class="w-5 h-5 mt-1 text-[#EA4335]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>DRIVE PLUS AVULSOS e DIVERSOS</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-16">
+                <a href="https://pay.kiwify.com.br/UO1cl5O" class="btn-primary animate-pulse-custom bg-[#4285F4] hover:bg-[#3b7ae0] text-white">
+                    QUERO ACESSO COMPLETO AO DRIVE SUPREMO!
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Section: Sua Vida Digital Nunca Mais Será a Mesma -->
+    <section class="py-20 px-4 bg-[#e6f2ff] text-center">
+        <div class="container">
+            <h2 class="section-title text-[#2563eb] mb-8">
+                🚀 Sua Vida Digital NUNCA Mais Será a Mesma!
+            </h2>
+            <p class="text-xl md:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto">
+                Chega de perder tempo e dinheiro! Com o Drive Supremo, você tem acesso instantâneo a um arsenal de conhecimento e ferramentas que vão te impulsionar.
+            </p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-6 bg-white rounded-xl shadow-md transform hover:scale-105 transition duration-300">
+                    <span class="block text-5xl mb-4 text-[#4285F4]">⏱️</span>
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">Otimize Seu Tempo</h3>
+                    <p class="text-gray-600">Encontre tudo que precisa em segundos, sem buscas intermináveis.</p>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-md transform hover:scale-105 transition duration-300">
+                    <span class="block text-5xl mb-4 text-[#34A853]">💰</span>
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">Multiplique Seus Lucros</h3>
+                    <p class="text-gray-600">Use o conteúdo para criar novos negócios ou impulsionar os existentes.</p>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-md transform hover:scale-105 transition duration-300">
+                    <span class="block text-5xl mb-4 text-[#FBBC05]">✨</span>
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">Domine Novas Habilidades</h3>
+                    <p class="text-gray-600">Acesse cursos e materiais que te levarão ao próximo nível.</p>
+                </div>
+            </div>
+            <a href="https://pay.kiwify.com.br/UO1cl5O" class="btn-primary mt-16 bg-[#34A853] hover:bg-[#2e8b4e] text-white animate-pulse-custom">
+                TRANSFORME SUA VIDA AGORA!
+            </a>
         </div>
     </section>
 
@@ -265,7 +416,7 @@
                 </div>
                 <div class="flex flex-col items-center">
                     <span class="text-5xl mb-3 text-[#EA4335]">📂</span>
-                    <p class="font-semibold text-xl">Entrega imediata via Google Drive + Backup</p>
+                    <p class="font-semibold text-lg">Entrega imediata via Google Drive + Backup</p>
                 </div>
                 <div class="flex flex-col items-center">
                     <span class="text-5xl mb-3 text-[#FBBC05]">📞</span>
@@ -299,7 +450,7 @@
     </a>
 
     <!-- Footer -->
-    <footer class="bg-[#202124] text-white py-10 px-4 text-center rounded-t-[3rem]">
+    <footer class="bg-[#202124] text-white py-10 px-4 text-center rounded-t-[3rem] shadow-inner-top">
         <div class="container">
             <p class="text-lg">&copy; 2025 A Chave da Internet. Todos os direitos reservados.</p>
             <p class="mt-3 text-base opacity-80">
@@ -310,4 +461,5 @@
 
 </body>
 </html>
+
 
