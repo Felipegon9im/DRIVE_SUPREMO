@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Chave da Internet — O Drive Supremo</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa; /* Light Google-inspired gray background */
+            color: #202124; /* Dark Google-inspired text color */
+            line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scroll on small devices */
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem; /* Increased padding for better spacing */
+        }
+        .btn-primary {
+            background-color: #ea4335; /* Google Red for urgency */
+            color: white;
+            padding: 1.25rem 3rem; /* Larger padding */
+            border-radius: 9999px; /* Fully rounded */
+            font-weight: 800; /* Extra bold */
+            font-size: 1.375rem; /* Slightly larger font */
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 6px 20px rgba(234, 67, 53, 0.5); /* Stronger shadow */
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase; /* Uppercase text */
+            letter-spacing: 0.05em; /* Slight letter spacing */
+        }
+        .btn-primary:hover {
+            background-color: #d93025; /* Darker red on hover */
+            transform: translateY(-5px); /* More pronounced lift */
+            box-shadow: 0 10px 30px rgba(234, 67, 53, 0.6);
+        }
+        .section-title {
+            font-size: 3rem; /* Larger title */
+            font-weight: 800; /* Extra bold */
+            color: #202124; /* Darker text for titles, Google-inspired */
+            margin-bottom: 2.5rem; /* Increased margin */
+            text-align: center;
+            line-height: 1.2;
+        }
+        .card {
+            background-color: white;
+            border-radius: 1.5rem; /* More rounded corners */
+            padding: 2.5rem; /* More padding inside cards */
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); /* Stronger, softer shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            height: 100%; /* Ensure cards have consistent height */
+        }
+        .card:hover {
+            transform: translateY(-8px); /* More pronounced lift */
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+        }
+        .icon {
+            font-size: 3rem; /* Larger icons */
+            margin-bottom: 1.5rem; /* More space below icons */
+            display: block;
+            text-align: center;
+        }
+        /* Specific icon colors inspired by Google Drive */
+        .icon.blue { color: #4285F4; } /* Google Blue */
+        .icon.green { color: #34A853; } /* Google Green */
+        .icon.yellow { color: #FBBC05; } /* Google Yellow */
+        .icon.red { color: #EA4335; } /* Google Red */
+
+        /* Pulse animation for CTA button */
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(234, 67, 53, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(234, 67, 53, 0); } /* Larger pulse effect */
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(234, 67, 53, 0); }
+        }
+        .animate-pulse-custom {
+            animation: pulse 2s infinite;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 65px; /* Slightly larger */
+            height: 65px; /* Slightly larger */
+            bottom: 30px; /* Adjusted position */
+            right: 30px; /* Adjusted position */
+            background-color: #25d366; /* WhatsApp Green */
+            color: #FFF;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 32px; /* Adjusted font size */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.15); /* More pronounced lift */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+        .whatsapp-float img {
+            width: 40px; /* Larger logo inside button */
+            height: 40px;
+        }
+        .drive-logo {
+            height: 70px; /* Slightly larger logo in header */
+            width: auto;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 20px;
+        }
+        /* Responsive video container */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 900px; /* Increased max width for desktop */
+            margin: 0 auto 3rem; /* Center and add more margin below */
+            border-radius: 1.5rem; /* More rounded corners for the video */
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-r from-[#4285F4] to-[#34A853] text-white py-24 px-4 text-center rounded-b-[3rem] shadow-2xl">
+        <div class="container">
+            <h1 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight flex flex-col md:flex-row items-center justify-center">
+                <img src="https://www.gstatic.com/images/branding/product/2x/drive_2020q4_48dp.png" alt="Google Drive Logo" class="drive-logo mb-4 md:mb-0">
+                A CHAVE DA INTERNET <br class="md:hidden"/>— O DRIVE SUPREMO POR APENAS R$27
+            </h1>
+            <p class="text-2xl md:text-3xl font-semibold mb-10">
+                🚨 VOCÊ NUNCA MAIS VAI PRECISAR PROCURAR NADA NA INTERNET. TÁ TUDO AQUI!
+            </p>
+            <p class="text-xl md:text-2xl mb-16 max-w-4xl mx-auto opacity-95">
+                🔥 São mais de <span class="font-bold text-[#FBBC05] text-3xl md:text-4xl">500 MIL arquivos raros e valiosos</span> reunidos num único drive. É conteúdo pra estudar, empreender, revender e lucrar o quanto quiser!
+            </p>
+            <a href="https://pay.kiwify.com.br/UO1cl5O" class="btn-primary animate-pulse-custom">
+                QUERO MEU DRIVE SUPREMO AGORA!
+            </a>
+        </div>
+    </header>
+
+    <!-- Video Section -->
+    <section class="py-16 px-4 bg-gray-100">
+        <div class="container">
+            <h2 class="section-title text-[#202124] mb-10">Veja o que você vai ter acesso!</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/7ozK7I1aH7w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You Get Section -->
+    <section class="py-20 px-4 bg-white">
+        <div class="container">
+            <h2 class="section-title text-[#4285F4]">
+                ✅ O QUE VOCÊ LEVA POR APENAS R$27?
+            </h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="card">
+                    <span class="icon blue">📚</span>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">1.500 eBooks</h3>
+                    <p class="text-gray-600 text-lg">Livros digitais de todas as áreas, best-sellers e coleções raras para expandir seu conhecimento.</p>
+                </div>
+                <div class="card">
+                    <span class="icon green">📲</span>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">APKs Premium</h3>
+                    <p class="text-gray-600 text-lg">Apps pagos, modificados e exclusivos para otimizar sua vida digital, sem custo adicional.</p>
+                </div>
+                <div class="card">
+                    <span class="icon yellow">📡</span>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">IPTV Vitalício</h3>
+                    <p class="text-gray-600 text-lg">Canais, filmes e séries sem mensalidade. Diga adeus às assinaturas e desfrute do entretenimento que você merece.</p>
+                </div>
+                <div class="card">
+                    <span class="icon blue">🎓</span>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Material completo de concurso público</h3>
+                    <p class="text-gray-600 text-lg">Prepare-se para o sucesso com conteúdo de todas as áreas e bancas, incluindo **Direito, Medicina, Enfermagem** e muito mais!</p>
+                </div>
+                <div class="card">
+                    <span class="icon green">🎁</span>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Pastas secretas</h3>
+                    <p class="text-gray-600 text-lg">Hacks, ferramentas e coleções ocultas que você só encontra aqui.</p>
+                </div>
+                <div class="card">
+                    <span class="icon yellow">✨</span>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">+10 mil templates de sites premium do Envato Templates</h3>
+                    <p class="text-gray-600 text-lg">Acesse uma vasta biblioteca de templates profissionais para seus projetos, sem custo adicional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Freedom of Use Section -->
+    <section class="py-20 px-4 bg-[#f0f2f5]">
+        <div class="container text-center">
+            <h2 class="section-title text-[#34A853]">
+                🤑 Liberdade total de uso: Seu Conteúdo, Suas Regras!
+            </h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-16">
+                <div class="card p-8">
+                    <span class="icon green">✔️</span>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Revenda tudo ou em partes</h3>
+                    <p class="text-gray-600 text-lg">Transforme este drive em sua própria fonte de renda, revendendo o conteúdo como quiser.</p>
+                </div>
+                <div class="card p-8">
+                    <span class="icon blue">✔️</span>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Monte seu próprio drive, canal ou loja</h3>
+                    <p class="text-gray-600 text-lg">Use nosso conteúdo como base para seu próximo grande projeto digital.</p>
+                </div>
+                <div class="card p-8">
+                    <span class="icon yellow">✔️</span>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Estude, crie, automatize, lucre como quiser</h3>
+                    <p class="text-gray-600 text-lg">As possibilidades são infinitas! Use o drive para seu crescimento pessoal e financeiro.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment & Guarantee Section -->
+    <section class="py-20 px-4 bg-[#4285F4] text-white text-center rounded-t-[3rem] shadow-2xl">
+        <div class="container">
+            <h2 class="text-5xl md:text-6xl font-extrabold mb-8">
+                💸 INVESTIMENTO ÚNICO: R$27,00
+            </h2>
+            <p class="text-2xl md:text-3xl mb-12 max-w-3xl mx-auto opacity-95">
+                Pague uma única vez e ganhe conteúdo, lucro e liberdade para sempre, com **atualização vitalícia** de todo o material!
+            </p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <div class="flex flex-col items-center">
+                    <span class="text-5xl mb-3 text-[#FBBC05]">📦</span>
+                    <p class="font-semibold text-xl">Compra 100% segura via Kiwify</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-5xl mb-3 text-[#34A853]">✅</span>
+                    <p class="font-semibold text-xl">7 dias de garantia automática pela plataforma</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-5xl mb-3 text-[#EA4335]">📂</span>
+                    <p class="font-semibold text-xl">Entrega imediata via Google Drive + Backup</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-5xl mb-3 text-[#FBBC05]">📞</span>
+                    <p class="font-semibold text-xl">Suporte inicial pra ajudar você a revender ou organizar</p>
+                </div>
+            </div>
+            <a href="https://pay.kiwify.com.br/UO1cl5O" class="btn-primary bg-[#FBBC05] hover:bg-[#f7c843] text-[#202124] animate-pulse-custom">
+                GARANTA SEU ACESSO AGORA!
+            </a>
+        </div>
+    </section>
+
+    <!-- Final Call to Action Section -->
+    <section id="call-to-action" class="py-20 px-4 bg-white text-center">
+        <div class="container">
+            <h2 class="text-5xl md:text-6xl font-bold text-[#202124] mb-10">
+                🚀 Essa é a mina de ouro digital que você esperava.
+            </h2>
+            <p class="text-xl md:text-2xl text-gray-600 mb-16 max-w-4xl mx-auto">
+                Não perca mais tempo procurando! Tenha acesso a um universo de conteúdo valioso e comece a lucrar hoje mesmo.
+            </p>
+            <a href="https://pay.kiwify.com.br/UO1cl5O" class="btn-primary animate-pulse-custom">
+                SIM! EU QUERO A CHAVE DA INTERNET!
+            </a>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5548988628030" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="WhatsApp Logo" onerror="this.onerror=null;this.src='https://placehold.co/40x40/25d366/ffffff?text=WA'">
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-[#202124] text-white py-10 px-4 text-center rounded-t-[3rem]">
+        <div class="container">
+            <p class="text-lg">&copy; 2025 A Chave da Internet. Todos os direitos reservados.</p>
+            <p class="mt-3 text-base opacity-80">
+                Termos de Uso | Política de Privacidade
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
