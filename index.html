@@ -24,7 +24,7 @@
             background-color: #ea4335; /* Google Red for urgency */
             color: white;
             padding: 1.25rem 3rem; /* Larger padding */
-            border-radius: 9999px; /* Fully rounded */
+            border-radius: 0; /* Square borders */
             font-weight: 800; /* Extra bold */
             font-size: 1.375rem; /* Slightly larger font */
             transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
@@ -50,7 +50,7 @@
         }
         .card {
             background-color: #2d3748; /* Darker card background */
-            border-radius: 1.5rem; /* More rounded corners */
+            border-radius: 0; /* Square borders */
             padding: 2.5rem; /* More padding inside cards */
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3); /* Stronger, darker shadow */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -95,7 +95,7 @@
             right: 30px; /* Adjusted position */
             background-color: #25d366; /* WhatsApp Green */
             color: #FFF;
-            border-radius: 50%;
+            border-radius: 50%; /* Round borders for WhatsApp button */
             text-align: center;
             font-size: 32px; /* Adjusted font size */
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow */
@@ -128,7 +128,7 @@
             overflow: hidden;
             max-width: 900px; /* Increased max width for desktop */
             margin: 0 auto 3rem; /* Center and add more margin below */
-            border-radius: 1.5rem; /* More rounded corners for the video */
+            border-radius: 0; /* Square borders */
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4); /* Stronger dark shadow */
         }
         .video-container iframe {
@@ -161,7 +161,7 @@
             max-width: 1000px; /* Max width for the carousel */
             margin: 0 auto 4rem; /* Center and add margin below */
             overflow: hidden;
-            border-radius: 1.5rem;
+            border-radius: 0; /* Square borders */
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4); /* Darker shadow */
         }
         .carousel-slides {
@@ -179,11 +179,12 @@
         .carousel-slide img {
             width: 100%;
             height: auto;
-            border-radius: 1.5rem; /* Match container border-radius */
+            border-radius: 0; /* Square borders */
         }
         .carousel-button {
             background-color: rgba(255, 255, 255, 0.2); /* Lighter background for buttons */
             color: white;
+            border-radius: 0; /* Square borders */
         }
         .carousel-button:hover {
             background-color: rgba(255, 255, 255, 0.4); /* Lighter hover */
@@ -193,6 +194,7 @@
         }
         .carousel-dot {
             background-color: rgba(255, 255, 255, 0.4); /* Lighter dots */
+            border-radius: 50%; /* Keep dots round for clarity */
         }
         .carousel-dot.active {
             background-color: white;
@@ -202,7 +204,7 @@
 <body class="antialiased">
 
     <!-- Hero Section -->
-    <header class="bg-gradient-to-r from-[#4285F4] to-[#34A853] text-white py-24 px-4 text-center rounded-b-[3rem] shadow-2xl header-bg-pattern">
+    <header class="bg-gradient-to-r from-[#4285F4] to-[#34A853] text-white py-24 px-4 text-center rounded-none shadow-2xl header-bg-pattern">
         <div class="container">
             <h1 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight flex flex-col md:flex-row items-center justify-center">
                 <img src="https://www.gstatic.com/images/branding/product/2x/drive_2020q4_48dp.png" alt="Google Drive Logo" class="drive-logo mb-4 md:mb-0">
@@ -221,7 +223,7 @@
     </header>
 
     <!-- Video Section -->
-    <section class="py-16 px-4 bg-[#2d3748]"> /* Dark background */
+    <section class="py-16 px-4 bg-gradient-to-b from-[#2d3748] to-[#1a202c]">
         <div class="container">
             <h2 class="section-title text-white mb-10">Veja o que você vai ter acesso!</h2>
             <div class="video-container">
@@ -231,7 +233,7 @@
     </section>
 
     <!-- What You Get Section -->
-    <section class="py-20 px-4 bg-[#1a202c]"> /* Dark background */
+    <section class="py-20 px-4 bg-gradient-to-b from-[#1a202c] to-[#2d3748]">
         <div class="container">
             <h2 class="section-title text-[#4285F4]">
                 ✅ O QUE VOCÊ LEVA POR APENAS R$27?
@@ -277,7 +279,7 @@
     </section>
 
     <!-- Carousel Section -->
-    <section class="py-16 px-4 bg-[#2d3748]"> /* Dark background */
+    <section class="py-16 px-4 bg-gradient-to-b from-[#2d3748] to-[#1a202c]">
         <div class="container">
             <h2 class="section-title text-white mb-10">Uma Amostra do Que Você Vai Encontrar!</h2>
             <div class="carousel-container">
@@ -312,7 +314,7 @@
     </section>
 
     <!-- New Section: Explore o Conteúdo Completo do Drive Supremo -->
-    <section class="py-20 px-4 bg-[#1a202c]"> /* Dark background */
+    <section class="py-20 px-4 bg-gradient-to-b from-[#1a202c] to-[#2d3748]">
         <div class="container">
             <h2 class="section-title text-white mb-10">
                 🔍 Explore o Conteúdo Completo do Drive Supremo!
@@ -417,7 +419,7 @@
     </section>
 
     <!-- New Section: Sua Vida Digital Nunca Mais Será a Mesma -->
-    <section class="py-20 px-4 bg-[#2d3748] text-center"> /* Dark background */
+    <section class="py-20 px-4 bg-gradient-to-b from-[#2d3748] to-[#1a202c]">
         <div class="container">
             <h2 class="section-title text-[#2563eb] mb-8">
                 🚀 Sua Vida Digital NUNCA Mais Será a Mesma!
@@ -426,17 +428,17 @@
                 Chega de perder tempo e dinheiro! Com o Drive Supremo, você tem acesso instantâneo a um arsenal de conhecimento e ferramentas que vão te impulsionar.
             </p>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="p-6 bg-[#1a202c] rounded-xl shadow-md transform hover:scale-105 transition duration-300"> /* Dark card background */
+                <div class="p-6 bg-[#1a202c] rounded-none shadow-md transform hover:scale-105 transition duration-300">
                     <span class="block text-5xl mb-4 text-[#4285F4]">⏱️</span>
                     <h3 class="text-xl font-bold mb-2 text-gray-100">Otimize Seu Tempo</h3>
                     <p class="text-gray-300">Encontre tudo que precisa em segundos, sem buscas intermináveis.</p>
                 </div>
-                <div class="p-6 bg-[#1a202c] rounded-xl shadow-md transform hover:scale-105 transition duration-300"> /* Dark card background */
+                <div class="p-6 bg-[#1a202c] rounded-none shadow-md transform hover:scale-105 transition duration-300">
                     <span class="block text-5xl mb-4 text-[#34A853]">💰</span>
                     <h3 class="text-xl font-bold mb-2 text-gray-100">Multiplique Seus Lucros</h3>
                     <p class="text-gray-300">Use o conteúdo para criar novos negócios ou impulsionar os existentes.</p>
                 </div>
-                <div class="p-6 bg-[#1a202c] rounded-xl shadow-md transform hover:scale-105 transition duration-300"> /* Dark card background */
+                <div class="p-6 bg-[#1a202c] rounded-none shadow-md transform hover:scale-105 transition duration-300">
                     <span class="block text-5xl mb-4 text-[#FBBC05]">✨</span>
                     <h3 class="text-xl font-bold mb-2 text-gray-100">Domine Novas Habilidades</h3>
                     <p class="text-gray-300">Acesse cursos e materiais que te levarão ao próximo nível.</p>
@@ -449,7 +451,7 @@
     </section>
 
     <!-- Freedom of Use Section -->
-    <section class="py-20 px-4 bg-[#1a202c]"> /* Dark background */
+    <section class="py-20 px-4 bg-gradient-to-b from-[#1a202c] to-[#4285F4]">
         <div class="container text-center">
             <h2 class="section-title text-[#34A853]">
                 🤑 Liberdade total de uso: Seu Conteúdo, Suas Regras!
@@ -475,7 +477,7 @@
     </section>
 
     <!-- Investment & Guarantee Section -->
-    <section class="py-20 px-4 bg-[#4285F4] text-white text-center rounded-t-[3rem] shadow-2xl">
+    <section class="py-20 px-4 bg-gradient-to-b from-[#4285F4] to-[#1a202c] text-white text-center rounded-none shadow-2xl">
         <div class="container">
             <h2 class="text-5xl md:text-6xl font-extrabold mb-8">
                 💸 INVESTIMENTO ÚNICO: R$27,00
@@ -508,7 +510,7 @@
     </section>
 
     <!-- Final Call to Action Section -->
-    <section id="call-to-action" class="py-20 px-4 bg-[#1a202c]"> /* Dark background */
+    <section id="call-to-action" class="py-20 px-4 bg-gradient-to-b from-[#1a202c] to-[#202124]">
         <div class="container">
             <h2 class="text-5xl md:text-6xl font-bold text-white mb-10">
                 🚀 Essa é a mina de ouro digital que você esperava.
@@ -528,7 +530,7 @@
     </a>
 
     <!-- Footer -->
-    <footer class="bg-[#202124] text-white py-10 px-4 text-center rounded-t-[3rem] shadow-inner-top">
+    <footer class="bg-[#202124] text-white py-10 px-4 text-center rounded-none shadow-inner-top">
         <div class="container">
             <p class="text-lg">&copy; 2025 A Chave da Internet. Todos os direitos reservados.</p>
             <p class="mt-3 text-base opacity-80">
@@ -594,6 +596,7 @@
     </script>
 </body>
 </html>
+
 
 
 
